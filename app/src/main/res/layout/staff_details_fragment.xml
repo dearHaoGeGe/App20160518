@@ -2,14 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:gravity="center"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="000000"
-        android:textSize="30sp" />
+    <com.my.app20160518.view.PagerSlidingTabStrip
+        android:id="@+id/tabs_StaffDetailsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/background_tabs" />
 
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager_StaffDetailsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabs_StaffDetailsFragment"
+        tools:context=".StaffDetailsFragment" />
 </LinearLayout>
