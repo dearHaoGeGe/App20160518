@@ -66,8 +66,8 @@ public class InvestigationDetailsCaseFragment extends Fragment implements XListV
         xListView_InvestigationDetailsCaseFragment.setPullLoadEnable(true);
         xListView_InvestigationDetailsCaseFragment.setXListViewListener(this);
 
-        View view=LayoutInflater.from(getActivity()).inflate(R.layout.investigation_case_fragment_item,null);
-        TextView tv= (TextView) view.findViewById(R.id.tv_caseName_item_investigation_case_fragment);
+        View view=LayoutInflater.from(getActivity()).inflate(R.layout.investigation_etails_case_fragment_header,null);
+        TextView tv= (TextView) view.findViewById(R.id.tv_header_item_investigation_case_fragment);
         tv.setText("案件相关人员");
         tv.setTextSize(30);
         xListView_InvestigationDetailsCaseFragment.addHeaderView(view);
@@ -146,10 +146,10 @@ public class InvestigationDetailsCaseFragment extends Fragment implements XListV
         public View getView(int position, View convertView, ViewGroup parent) {
             ViewHolder viewHolder = null;
             if (convertView == null) {
-                convertView = LayoutInflater.from(context).inflate(R.layout.investigation_case_fragment_item, parent, false);
+                convertView = LayoutInflater.from(context).inflate(R.layout.investigation_etails_case_fragment_header, parent, false);
                 viewHolder = new ViewHolder();
                 viewHolder.tv_caseName_item_investigation_case_fragment =
-                        (TextView) convertView.findViewById(R.id.tv_caseName_item_investigation_case_fragment);
+                        (TextView) convertView.findViewById(R.id.tv_header_item_investigation_case_fragment);
 
                 convertView.setTag(viewHolder);
             } else {

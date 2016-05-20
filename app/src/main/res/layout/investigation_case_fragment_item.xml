@@ -1,19 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv_caseName_item_investigation_case_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="招远麦当劳杀人案"
-        android:textSize="20sp" />
+    <!--<TextView-->
+    <!--android:id="@+id/tv_caseName_item_investigation_case_fragment"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="20dp"-->
+    <!--android:layout_marginLeft="30dp"-->
+    <!--android:layout_marginRight="30dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:gravity="center"-->
+    <!--android:text="招远麦当劳杀人案"-->
+    <!--android:textSize="20sp" />-->
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/imageView_investigation_case_fragment_item"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_name_investigation_case_fragment_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/imageView_investigation_case_fragment_item"
+        android:paddingTop="10dp"
+        android:text="李东与徐长彤离婚财产纠纷一案"
+        android:textColor="#080808"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_number_investigation_case_fragment_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name_investigation_case_fragment_item"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imageView_investigation_case_fragment_item"
+        android:text="2014高执字第0146号"
+        android:textColor="#969696"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_time_investigation_case_fragment_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_number_investigation_case_fragment_item"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/imageView_investigation_case_fragment_item"
+        android:paddingBottom="10dp"
+        android:text="立案日期：2015-6-1"
+        android:textColor="#969696"
+        android:textSize="15sp" />
+
+</RelativeLayout>

@@ -1,4 +1,4 @@
-package com.my.app20160518;
+package com.my.app20160518.tab;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.my.app20160518.R;
 
 /**
  * 银行Fragment

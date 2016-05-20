@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -186,22 +187,33 @@ public class InvestigationCaseFragment extends Fragment implements AdapterView.O
                 convertView = LayoutInflater.from(context)
                         .inflate(R.layout.investigation_case_fragment_item, parent, false);
                 viewHolder = new ViewHolder();
-                viewHolder.tv_caseName_item_investigation_case_fragment =
-                        (TextView) convertView.findViewById(R.id.tv_caseName_item_investigation_case_fragment);
+                viewHolder.tv_name_investigation_case_fragment_item =
+                        (TextView) convertView.findViewById(R.id.tv_name_investigation_case_fragment_item);
+                viewHolder.tv_number_investigation_case_fragment_item =
+                        (TextView) convertView.findViewById(R.id.tv_number_investigation_case_fragment_item);
+                viewHolder.tv_time_investigation_case_fragment_item =
+                        (TextView) convertView.findViewById(R.id.tv_time_investigation_case_fragment_item);
+                viewHolder.imageView_investigation_case_fragment_item =
+                        (ImageView) convertView.findViewById(R.id.imageView_investigation_case_fragment_item);
 
                 convertView.setTag(viewHolder);
             } else {
                 viewHolder = (ViewHolder) convertView.getTag();
             }
 
+            /**
+             * 填充数据
+             */
             if (datas != null) {
-                viewHolder.tv_caseName_item_investigation_case_fragment.setText(datas.get(position));
+                //viewHolder.tv_caseName_item_investigation_case_fragment.setText(datas.get(position));
             }
             return convertView;
         }
 
         class ViewHolder {
-            private TextView tv_caseName_item_investigation_case_fragment;
+            private ImageView imageView_investigation_case_fragment_item;
+            private TextView tv_name_investigation_case_fragment_item,tv_number_investigation_case_fragment_item,
+                    tv_time_investigation_case_fragment_item;
         }
 
         /**

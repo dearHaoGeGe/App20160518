@@ -1,4 +1,4 @@
-package com.my.app20160518;
+package com.my.app20160518.tab;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -8,15 +8,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.my.app20160518.R;
+
 /**
- * 公安Fragment
+ * 工商Fragment
  *
  * Created by Administrator on 2016/5/19.
  */
-public class PoliceFragment extends Fragment{
+public class BusinessCirclesFragment extends Fragment {
 
-    public static PoliceFragment newInstance() {
-        PoliceFragment fragment = new PoliceFragment();
+    public static BusinessCirclesFragment newInstance() {
+        BusinessCirclesFragment fragment = new BusinessCirclesFragment();
         return fragment;
     }
 
@@ -33,7 +35,7 @@ public class PoliceFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.police_fragment,container,false);
+        View view=inflater.inflate(R.layout.business_circles_fragment,container,false);
         return view;
     }
 

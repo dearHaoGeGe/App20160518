@@ -17,6 +17,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.my.app20160518.tab.BankFragment;
+import com.my.app20160518.tab.BusinessCirclesFragment;
+import com.my.app20160518.tab.PoliceFragment;
 import com.my.app20160518.view.PagerSlidingTabStrip;
 
 /**
