@@ -1,7 +1,10 @@
 package com.my.app20160518;
 
+import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -27,6 +30,7 @@ public class InvestigationDetailsCaseFragment extends Fragment implements XListV
     private XListView xListView_InvestigationDetailsCaseFragment;
     private InvestigationOfFeedbackActivity activity;
     private InvestigationDetailsCaseAdapter adapter;
+    private Handler mHandler;
     private List<String> data;
 
     public static InvestigationDetailsCaseFragment newInstance() {
@@ -45,15 +49,14 @@ public class InvestigationDetailsCaseFragment extends Fragment implements XListV
         super.onCreate(savedInstanceState);
     }
 
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.investigation_details_case_fragment, container, false);
         return view;
     }
 
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+    public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
         initView();
@@ -66,7 +69,7 @@ public class InvestigationDetailsCaseFragment extends Fragment implements XListV
         xListView_InvestigationDetailsCaseFragment.setPullLoadEnable(true);
         xListView_InvestigationDetailsCaseFragment.setXListViewListener(this);
 
-        View view=LayoutInflater.from(getActivity()).inflate(R.layout.investigation_etails_case_fragment_header,null);
+        View view=LayoutInflater.from(getActivity()).inflate(R.layout.investigation_details_case_fragment_header,null);
         TextView tv= (TextView) view.findViewById(R.id.tv_header_item_investigation_case_fragment);
         tv.setText("案件相关人员");
         tv.setTextSize(30);
@@ -76,13 +79,28 @@ public class InvestigationDetailsCaseFragment extends Fragment implements XListV
     }
 
     private void initData() {
-        data=new ArrayList<>();
+        mHandler=new Handler();
+        data=new ArrayList<String>();
         for (int i = 0; i < 10; i++) {
             data.add("人 员 姓 名");
         }
 
-        adapter = new InvestigationDetailsCaseAdapter(data,getActivity());
-        xListView_InvestigationDetailsCaseFragment.setAdapter(adapter);
+        final Dialog dialog=new ProgressDialog(getActivity());
+        dialog.setTitle("正在加载...");
+        dialog.show();
+
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                dialog.dismiss();
+
+                adapter = new InvestigationDetailsCaseAdapter(data,getActivity());
+                xListView_InvestigationDetailsCaseFragment.setAdapter(adapter);
+            }
+        },2000);
+
+//        adapter = new InvestigationDetailsCaseAdapter(data,getActivity());
+//        xListView_InvestigationDetailsCaseFragment.setAdapter(adapter);
     }
 
     /**
@@ -146,7 +164,7 @@ public class InvestigationDetailsCaseFragment extends Fragment implements XListV
         public View getView(int position, View convertView, ViewGroup parent) {
             ViewHolder viewHolder = null;
             if (convertView == null) {
-                convertView = LayoutInflater.from(context).inflate(R.layout.investigation_etails_case_fragment_header, parent, false);
+                convertView = LayoutInflater.from(context).inflate(R.layout.investigation_details_case_fragment_header, parent, false);
                 viewHolder = new ViewHolder();
                 viewHolder.tv_caseName_item_investigation_case_fragment =
                         (TextView) convertView.findViewById(R.id.tv_header_item_investigation_case_fragment);

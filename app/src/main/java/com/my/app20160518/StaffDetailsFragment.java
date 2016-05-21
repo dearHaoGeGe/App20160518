@@ -1,5 +1,7 @@
 package com.my.app20160518;
 
+import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -54,7 +56,7 @@ public class StaffDetailsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view=LayoutInflater.from(getActivity()).inflate(R.layout.staff_details_fragment,container,false);
+        View view=inflater.inflate(R.layout.staff_details_fragment,container,false);
         return view;
     }
 
@@ -62,7 +64,18 @@ public class StaffDetailsFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        init();
+        final Dialog dialog=new ProgressDialog(getActivity());
+        dialog.setTitle("正在加载...");
+        dialog.show();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                dialog.dismiss();
+
+                init();
+            }
+        },2000);
+//        init();
     }
 
     private void init(){

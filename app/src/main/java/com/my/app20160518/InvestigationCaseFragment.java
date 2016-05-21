@@ -1,5 +1,7 @@
 package com.my.app20160518;
 
+import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
@@ -73,20 +75,32 @@ public class InvestigationCaseFragment extends Fragment implements AdapterView.O
 
     private void initData() {
         mHandler = new Handler();
-        data = new ArrayList<>();
+        data = new ArrayList<String>();
         for (int i = 0; i < 10; i++) {
             data.add("X X X X X X X 案件");
         }
 
-        adapter = new CaseAdapter(getActivity(), data);
-        xListView_case_InvestigationCaseFragment.setAdapter(adapter);
+        final Dialog dialog=new ProgressDialog(getActivity());
+        dialog.setTitle("正在加载...");
+        dialog.show();
+
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                dialog.dismiss();
+                adapter = new CaseAdapter(getActivity(), data);
+                xListView_case_InvestigationCaseFragment.setAdapter(adapter);
+            }
+        },2000);
+//        adapter = new CaseAdapter(getActivity(), data);
+//        xListView_case_InvestigationCaseFragment.setAdapter(adapter);
     }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         int pos = position - 1;   //头布局占一个位置，所以-1
         if (pos >= 0) {           //判断是否pos为-1的情况下
-            Toast.makeText(getContext(), "" + pos, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "" + pos, Toast.LENGTH_SHORT).show();
             activity.initFragmentManager(InvestigationDetailsCaseFragment.newInstance());
         }
     }
@@ -206,6 +220,11 @@ public class InvestigationCaseFragment extends Fragment implements AdapterView.O
              */
             if (datas != null) {
                 //viewHolder.tv_caseName_item_investigation_case_fragment.setText(datas.get(position));
+                if (position <= 2) {
+                    viewHolder.imageView_investigation_case_fragment_item.setImageResource(R.drawable.clas_evi_editor);
+                } else {
+                    viewHolder.imageView_investigation_case_fragment_item.setImageResource(R.drawable.add_case_name_icon);
+                }
             }
             return convertView;
         }

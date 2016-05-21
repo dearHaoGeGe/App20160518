@@ -20,12 +20,12 @@
         android:id="@+id/imageView_investigation_case_fragment_item"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="20dp"
+        android:layout_centerVertical="true"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/ic_launcher" />
+        android:src="@drawable/clas_evi_editor" />
 
     <TextView
+        android:layout_marginRight="20dp"
         android:id="@+id/tv_name_investigation_case_fragment_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
