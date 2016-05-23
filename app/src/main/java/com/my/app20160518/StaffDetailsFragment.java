@@ -165,7 +165,7 @@ public class StaffDetailsFragment extends Fragment {
     public class MyPagerAdapter extends FragmentPagerAdapter {
 
         //此处是添加card的标题
-        private final String[] TITLES = {"我的音乐", "网络音乐","都是音乐","呵呵呵呵","测试数据","说四个字","颠覆世界"};
+        private final String[] TITLES = {"银行", "公安","工商","银行","公安","工商","银行"};
 
         public MyPagerAdapter(FragmentManager fm) {
             super(fm);
