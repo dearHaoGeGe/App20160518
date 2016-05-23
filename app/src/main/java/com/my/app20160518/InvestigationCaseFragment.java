@@ -6,11 +6,14 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,9 +29,10 @@ import java.util.List;
  * <p/>
  * Created by YJH on 2016/5/18.
  */
-public class InvestigationCaseFragment extends Fragment implements AdapterView.OnItemClickListener, XListView.IXListViewListener {
+public class InvestigationCaseFragment extends Fragment implements AdapterView.OnItemClickListener, XListView.IXListViewListener, TextWatcher {
 
     private XListView xListView_case_InvestigationCaseFragment;
+    private EditText editText_case_InvestigationCaseFragment;
     private CaseAdapter adapter;
     private InvestigationOfFeedbackActivity activity;
     private Handler mHandler;
@@ -66,19 +70,19 @@ public class InvestigationCaseFragment extends Fragment implements AdapterView.O
 
     private void initView() {
         xListView_case_InvestigationCaseFragment = (XListView) getActivity().findViewById(R.id.xListView_case_InvestigationCaseFragment);
+        editText_case_InvestigationCaseFragment= (EditText) getActivity().findViewById(R.id.editText_case_InvestigationCaseFragment);
 
         xListView_case_InvestigationCaseFragment.setPullLoadEnable(true);
         xListView_case_InvestigationCaseFragment.setXListViewListener(this);
 
         xListView_case_InvestigationCaseFragment.setOnItemClickListener(this);
+        editText_case_InvestigationCaseFragment.addTextChangedListener(this);
     }
 
     private void initData() {
         mHandler = new Handler();
         data = new ArrayList<String>();
-        for (int i = 0; i < 10; i++) {
-            data.add("X X X X X X X 案件");
-        }
+
 
         final Dialog dialog=new ProgressDialog(getActivity());
         dialog.setTitle("正在加载...");
@@ -136,11 +140,11 @@ public class InvestigationCaseFragment extends Fragment implements AdapterView.O
      */
     private void refreshData() {
         data.clear();
-        for (int i = 0; i < 3; i++) {
-            data.add("这是下拉加载数据(XXX案件)");
-            data.add("这是下拉加载数据(XXX案件)");
-            data.add("这是下拉加载数据(XXX案件)");
-        }
+//        for (int i = 0; i < 3; i++) {
+//            data.add("这是下拉加载数据(XXX案件)");
+//            data.add("这是下拉加载数据(XXX案件)");
+//            data.add("这是下拉加载数据(XXX案件)");
+//        }
         adapter.setDatas(data);
         adapter.notifyDataSetChanged();
         onLoad();
@@ -150,9 +154,9 @@ public class InvestigationCaseFragment extends Fragment implements AdapterView.O
      * 上拉加载数据(方法)
      */
     private void loadMoreData() {
-        adapter.addData("这是上拉加载数据(XXX案件)");
-        adapter.addData("这是上拉加载数据(XXX案件)");
-        adapter.addData("这是上拉加载数据(XXX案件)");
+//        adapter.addData("这是上拉加载数据(XXX案件)");
+//        adapter.addData("这是上拉加载数据(XXX案件)");
+//        adapter.addData("这是上拉加载数据(XXX案件)");
         onLoad();
     }
 
@@ -160,6 +164,21 @@ public class InvestigationCaseFragment extends Fragment implements AdapterView.O
         xListView_case_InvestigationCaseFragment.stopRefresh();
         xListView_case_InvestigationCaseFragment.stopLoadMore();
         xListView_case_InvestigationCaseFragment.setRefreshTime("");
+    }
+
+    @Override
+    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+    }
+
+    @Override
+    public void afterTextChanged(Editable s) {
+
     }
 
     /**

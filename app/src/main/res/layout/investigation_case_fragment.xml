@@ -5,6 +5,11 @@
     android:orientation="vertical"
     android:gravity="center">
 
+    <EditText
+        android:id="@+id/editText_case_InvestigationCaseFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <com.my.app20160518.view.XListView
         android:id="@+id/xListView_case_InvestigationCaseFragment"
         android:layout_width="match_parent"
