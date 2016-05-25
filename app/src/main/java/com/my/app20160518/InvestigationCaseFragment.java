@@ -83,6 +83,7 @@ public class InvestigationCaseFragment extends Fragment implements AdapterView.O
         mHandler = new Handler();
         data = new ArrayList<String>();
 
+        data.add("0000000000");
 
         final Dialog dialog=new ProgressDialog(getActivity());
         dialog.setTitle("正在加载...");
