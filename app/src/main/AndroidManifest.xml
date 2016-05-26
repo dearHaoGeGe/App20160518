@@ -17,6 +17,8 @@
         </activity>
 
         <activity android:name=".activity.BankDetailsActivity"/>
+        <activity android:name=".activity.PoliceDetailsActivity"/>
+        <activity android:name=".activity.BusinessDetailsActivity"/>
 
     </application>
 

@@ -6,6 +6,7 @@ package com.my.app20160518.bean;
  * Created by YJH on 2016/5/26.
  */
 public class BusinessBean {
+    private String companyName;     //公司名称
     private long feedbackTime;      //反馈时间
     private String helpUnit;        //执协单位
     private long business_Registration_Number_Or_IDNumber;  //工商登记号或证件号
@@ -26,6 +27,14 @@ public class BusinessBean {
     private String remarks;     //备注
 
     public BusinessBean() {
+    }
+
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
     }
 
     public long getFeedbackTime() {

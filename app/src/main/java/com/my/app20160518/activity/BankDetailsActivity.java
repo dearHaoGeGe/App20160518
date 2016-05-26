@@ -175,7 +175,7 @@ public class BankDetailsActivity extends Activity {
     }
 
     /**
-     * 从BankDetailsActivity接到BankBean对象
+     * 从BankDetailsFragment接到BankBean对象
      *
      * @param bean
      */
