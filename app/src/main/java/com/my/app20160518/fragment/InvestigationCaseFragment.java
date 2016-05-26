@@ -1,4 +1,4 @@
-package com.my.app20160518;
+package com.my.app20160518.fragment;
 
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -18,6 +18,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.my.app20160518.activity.InvestigationOfFeedbackActivity;
+import com.my.app20160518.R;
 import com.my.app20160518.view.XListView;
 
 import java.util.ArrayList;

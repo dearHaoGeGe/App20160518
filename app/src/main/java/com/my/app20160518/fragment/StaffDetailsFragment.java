@@ -1,4 +1,4 @@
-package com.my.app20160518;
+package com.my.app20160518.fragment;
 
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -19,6 +19,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.my.app20160518.R;
 import com.my.app20160518.tab.BankFragment;
 import com.my.app20160518.tab.BusinessCirclesFragment;
 import com.my.app20160518.tab.PoliceFragment;
@@ -165,7 +166,7 @@ public class StaffDetailsFragment extends Fragment {
     public class MyPagerAdapter extends FragmentPagerAdapter {
 
         //此处是添加card的标题
-        private final String[] TITLES = {"银行", "公安","工商","银行","公安","工商","银行"};
+        private final String[] TITLES = {"银行", "公安","工商"};
 
         public MyPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -193,17 +194,6 @@ public class StaffDetailsFragment extends Fragment {
                 case 2:
                     return BusinessCirclesFragment.newInstance();
 
-                case 3:
-                    return BankFragment.newInstance();
-
-                case 4:
-                    return PoliceFragment.newInstance();
-
-                case 5:
-                    return BusinessCirclesFragment.newInstance();
-
-                case 6:
-                    return BankFragment.newInstance();
             }
             return null;
         }

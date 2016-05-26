@@ -1,10 +1,13 @@
-package com.my.app20160518;
+package com.my.app20160518.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+
+import com.my.app20160518.R;
+import com.my.app20160518.fragment.InvestigationCaseFragment;
 
 public class InvestigationOfFeedbackActivity extends FragmentActivity {
 

@@ -1,4 +1,4 @@
-package com.my.app20160518;
+package com.my.app20160518.fragment;
 
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -15,6 +15,8 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.my.app20160518.activity.InvestigationOfFeedbackActivity;
+import com.my.app20160518.R;
 import com.my.app20160518.view.XListView;
 
 import java.util.ArrayList;
@@ -22,7 +24,7 @@ import java.util.List;
 
 /**
  * 案件详情Fragment     (上拉加载下拉刷新暂时没有加)
- * <p/>
+ * <p>
  * Created by Administrator on 2016/5/19.
  */
 public class InvestigationDetailsCaseFragment extends Fragment implements XListView.IXListViewListener, AdapterView.OnItemClickListener {
@@ -41,7 +43,7 @@ public class InvestigationDetailsCaseFragment extends Fragment implements XListV
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        activity= (InvestigationOfFeedbackActivity) context;
+        activity = (InvestigationOfFeedbackActivity) context;
     }
 
     @Override
@@ -69,8 +71,8 @@ public class InvestigationDetailsCaseFragment extends Fragment implements XListV
         xListView_InvestigationDetailsCaseFragment.setPullLoadEnable(true);
         xListView_InvestigationDetailsCaseFragment.setXListViewListener(this);
 
-        View view=LayoutInflater.from(getActivity()).inflate(R.layout.investigation_details_case_fragment_header,null);
-        TextView tv= (TextView) view.findViewById(R.id.tv_header_item_investigation_case_fragment);
+        View view = LayoutInflater.from(getActivity()).inflate(R.layout.investigation_details_case_fragment_header, null);
+        TextView tv = (TextView) view.findViewById(R.id.tv_header_item_investigation_case_fragment);
         tv.setText("案件相关人员");
         tv.setTextSize(30);
         xListView_InvestigationDetailsCaseFragment.addHeaderView(view);
@@ -79,13 +81,13 @@ public class InvestigationDetailsCaseFragment extends Fragment implements XListV
     }
 
     private void initData() {
-        mHandler=new Handler();
-        data=new ArrayList<String>();
+        mHandler = new Handler();
+        data = new ArrayList<String>();
         for (int i = 0; i < 10; i++) {
             data.add("人 员 姓 名");
         }
 
-        final Dialog dialog=new ProgressDialog(getActivity());
+        final Dialog dialog = new ProgressDialog(getActivity());
         dialog.setTitle("正在加载...");
         dialog.show();
 
@@ -94,10 +96,10 @@ public class InvestigationDetailsCaseFragment extends Fragment implements XListV
             public void run() {
                 dialog.dismiss();
 
-                adapter = new InvestigationDetailsCaseAdapter(data,getActivity());
+                adapter = new InvestigationDetailsCaseAdapter(data, getActivity());
                 xListView_InvestigationDetailsCaseFragment.setAdapter(adapter);
             }
-        },2000);
+        }, 2000);
 
 //        adapter = new InvestigationDetailsCaseAdapter(data,getActivity());
 //        xListView_InvestigationDetailsCaseFragment.setAdapter(adapter);
@@ -121,9 +123,9 @@ public class InvestigationDetailsCaseFragment extends Fragment implements XListV
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        int pos=position-2;     //头布局-2
-        if (pos>=0){
-            Toast.makeText(getActivity(), ""+pos, Toast.LENGTH_SHORT).show();
+        int pos = position - 2;     //头布局-2
+        if (pos >= 0) {
+            Toast.makeText(getActivity(), "" + pos, Toast.LENGTH_SHORT).show();
             activity.initFragmentManager(StaffDetailsFragment.newInstance());
         }
     }
