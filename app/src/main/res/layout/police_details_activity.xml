@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/biankuang"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name_PoliceDetails_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="姓名：余承东" />
+
+        <TextView
+            android:id="@+id/tv_Before_Name_PoliceDetails_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="曾用名：余明" />
+
+        <TextView
+            android:id="@+id/tv_IDNumber_PoliceDetails_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="证件号码：21021103620168282" />
+
+        <TextView
+            android:id="@+id/tv_House_Number_Relationship_PoliceDetails_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="户号：DLHJ003" />
+
+        <TextView
+            android:id="@+id/tv_And_Host_Relationship_PoliceDetails_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="和户主关系：户主" />
+
+        <TextView
+            android:id="@+id/tv_Node_Type_PoliceDetails_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="户类型：非农" />
+
+        <TextView
+            android:id="@+id/tv_Marry_PoliceDetails_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="婚姻情况：未婚" />
+
+        <TextView
+            android:id="@+id/tv_Education_PoliceDetails_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="文化程度：博士" />
+
+        <TextView
+            android:id="@+id/tv_Nation__PoliceDetails_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="民族：回族" />
+
+        <TextView
+            android:id="@+id/tv_Job_PoliceDetails_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="职业：博士生导师" />
+
+        <TextView
+            android:id="@+id/tv_Gender_PoliceDetails_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="性别：女" />
+
+
+        <TextView
+            android:id="@+id/tv_Height_PoliceDetails_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="身高：175cm" />
+
+
+        <TextView
+            android:id="@+id/tv_Birthday_PoliceDetails_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="出生日期：1954-02-01" />
+
+        <TextView
+            android:id="@+id/tv_Place_Of_Birth_PoliceDetails_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="出生地：黑龙江省哈尔滨市" />
+
+        <TextView
+            android:id="@+id/tv_Domicile_Address_City_PoliceDetails_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="户籍地所在地址省市县（区）：黑龙江省哈尔滨市" />
+
+        <TextView
+            android:id="@+id/tv_Domicile_Address_PoliceDetails_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="户籍地住址详址：大连市甘井子区生态科技城" />
+
+        <TextView
+            android:id="@+id/tv_Police_Station_Name_PoliceDetails_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="所属派出所名称：动力路99号" />
+
+        <TextView
+            android:id="@+id/tv_Public_Security_Name_PoliceDetails_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="所属公安机关名称：哈尔滨市公安局" />
+
+        <TextView
+            android:id="@+id/tv_Other_Address_City_PoliceDetails_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="其他住址省市县（区）：哈尔滨市" />
+
+        <TextView
+            android:id="@+id/tv_Other_Address_PoliceDetails_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="其他住址详地：" />
+
+        <TextView
+            android:id="@+id/tv_Employer_PoliceDetails_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="服务处所：" />
+
+        <TextView
+            android:id="@+id/tv_Change_Date_PoliceDetails_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="变动日期：" />
+
+        <TextView
+            android:id="@+id/tv_Where_Move_PoliceDetails_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="何地迁入：" />
+
+    </LinearLayout>
+</ScrollView>

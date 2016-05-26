@@ -17,7 +17,7 @@ import de.greenrobot.event.EventBus;
  */
 public class BankDetailsActivity extends Activity {
 
-    private BankBean bankBean;;
+    private BankBean bankBean;
     private static final String ACT_CREATE = "BankDetailsActivity已经创建";
     private TextView tv_HelpUnit_BankDetails_item, tv_AccountOpening_BankDetails_item,
             tv_AccountNumber_BankDetails_item, tv_NewAccountCode_BankDetails_item,
