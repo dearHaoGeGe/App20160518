@@ -1,159 +1,333 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="none">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="5dp"
-        android:background="@drawable/biankuang"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingBottom="5dp">
 
         <TextView
             android:id="@+id/tv_HelpUnit_BankDetails_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="15sp"
             android:text="执协单位：高原商业银行" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBDBDB" />
 
         <TextView
             android:id="@+id/tv_AccountOpening_BankDetails_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="开户网点：工商银行" />
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="开户网点：工商银行"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBDBDB" />
 
         <TextView
             android:id="@+id/tv_AccountNumber_BankDetails_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="开户账号：20168282" />
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="开户账号：20168282"
+            android:textSize="15sp" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBDBDB" />
 
         <TextView
             android:id="@+id/tv_NewAccountCode_BankDetails_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="开户网点代码：dl4142" />
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="开户网点代码：dl4142"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBDBDB" />
 
         <TextView
             android:id="@+id/tv_Amount_Of_Assets_BankDetails_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="资产数额：4561.25" />
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="资产数额：4561.25"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBDBDB" />
 
         <TextView
             android:id="@+id/tv_Account_Type_BankDetails_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="账户类别：信用卡" />
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="账户类别：信用卡"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBDBDB" />
 
         <TextView
             android:id="@+id/tv_Currency_BankDetails_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="计价币种：人民币" />
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="计价币种：人民币"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBDBDB" />
 
         <TextView
             android:id="@+id/tv_Date_Of_Account_BankDetails_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="开户日期：2010-05-20" />
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="开户日期：2010-05-20"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBDBDB" />
 
         <TextView
             android:id="@+id/tv_Account_Status_BankDetails_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="账户状态：正常" />
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="账户状态：正常"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBDBDB" />
 
         <TextView
             android:id="@+id/tv_PostCode_BankDetails_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="邮政编码：116600" />
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="邮政编码：116600"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBDBDB" />
 
         <TextView
             android:id="@+id/tv_Account_Balance_BankDetails_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="可用资产数额：88.12" />
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="可用资产数额：88.12"
+            android:textSize="15sp" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBDBDB" />
 
         <TextView
             android:id="@+id/tv_NotesOnTheNotes_BankDetails_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="钞汇标志：本币" />
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="钞汇标志：本币"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBDBDB" />
 
         <TextView
             android:id="@+id/tv_NewAccountBankAddress_BankDetails_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="开户银行地址：大连市甘井子区支行" />
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="开户银行地址：大连市甘井子区支行"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBDBDB" />
 
         <TextView
             android:id="@+id/tv_RelatedCapitalAccount_BankDetails_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="关联资金账户：630215656" />
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="关联资金账户：630215656"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBDBDB" />
 
         <TextView
             android:id="@+id/tv_Address_BankDetails_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="通讯地址：大连市甘井子区生态科技城" />
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="通讯地址：大连市甘井子区生态科技城"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBDBDB" />
 
         <TextView
             android:id="@+id/tv_FeedbackTime_BankDetails_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="反馈时间：2013-05-25" />
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="反馈时间：2013-05-25"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBDBDB" />
 
         <TextView
             android:id="@+id/tv_Data_Stop_Time_BankDetails_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="数据截止时间：2016-05-25" />
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="数据截止时间：2016-05-25"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBDBDB" />
 
         <TextView
             android:id="@+id/tv_LogoutAccountDate_BankDetails_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="注销日期：2010-05-25" />
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="注销日期：2010-05-25"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBDBDB" />
 
         <TextView
             android:id="@+id/tv_Phone_BankDetails_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="联系电话：" />
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="联系电话："
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBDBDB" />
 
         <TextView
             android:id="@+id/tv_Remarks_BankDetails_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
             android:layout_marginTop="10dp"
-            android:text="备注：" />
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="备注："
+            android:textSize="15sp" />
 
     </LinearLayout>
 </ScrollView>
