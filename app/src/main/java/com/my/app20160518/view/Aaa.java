@@ -20,12 +20,14 @@ public class Aaa extends Activity {
 
     private View view1, view2;
     private LinearLayout ll;
+    private BarChartView bar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aaa);
 
+        bar = (BarChartView) findViewById(R.id.bar);
         view1 = findViewById(R.id.view1);
         view2 = findViewById(R.id.view2);
         ll = (LinearLayout) findViewById(R.id.ll);
@@ -39,38 +41,17 @@ public class Aaa extends Activity {
                 Log.d("8------width =", "" + ll.getWidth());
 
                 ViewGroup.LayoutParams lp = view2.getLayoutParams();
-                lp.width = (int) (ll.getWidth() * 0.6);
+                lp.width = (int) (ll.getWidth() * 0.8);     //设置数值
                 view2.setLayoutParams(lp);
             }
         });
 
-        //此方法不要用一直在回调浪费资源
-//        ViewTreeObserver vto = ll.getViewTreeObserver();
-//        vto.addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
-//            public boolean onPreDraw() {
-//                int height = ll.getMeasuredHeight();
-//                int width = ll.getMeasuredWidth();
-//
-//                Log.d("------height =", "" + height);
-//                Log.d("------width =", "" + width);
-//
-//                Log.d("000", "000");
-//                ViewGroup.LayoutParams lp = view2.getLayoutParams();
-//                lp.width = (int) (width * 0.6);
-//                view2.setLayoutParams(lp);
-//
-//                return true;
-//            }
-//        });
+        bar = new BarChartView(this, ll, 0.8f);
+//        bar.setParentView(ll);
+//        ViewGroup.LayoutParams lp = bar.getLayoutParams();
+//        lp.width = (int) (bar.getParentViewWidth() * 0.6);
+//        bar.setLayoutParams(lp);
+
     }
 
-
-    //        //在代码中设置界面大小的方法:
-//
-//        Display display = getWindowManager().getDefaultDisplay(); // 为获取屏幕宽、高
-//        Window window = getWindow();
-//        WindowManager.LayoutParams windowLayoutParams = window.getAttributes(); // 获取对话框当前的参数值
-//        windowLayoutParams.width = (int) (display.getWidth() * 0.7); // 宽度设置为屏幕的0.95
-//        windowLayoutParams.height = (int) (display.getHeight() * 0.1); // 高度设置为屏幕的0.6
-//        windowLayoutParams.alpha = 0.5f;// 设置透明度
 }
