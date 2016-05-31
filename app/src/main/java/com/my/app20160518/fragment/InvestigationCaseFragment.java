@@ -3,6 +3,7 @@ package com.my.app20160518.fragment;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -11,17 +12,18 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.my.app20160518.activity.InvestigationOfFeedbackActivity;
 import com.my.app20160518.R;
+import com.my.app20160518.activity.Aaa;
 import com.my.app20160518.view.XListView;
 
 import java.util.ArrayList;
@@ -118,8 +120,8 @@ public class InvestigationCaseFragment extends Fragment implements AdapterView.O
         mHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                //ll_Refresh_Success.setVisibility(View.VISIBLE);
-                tv_Refresh_Failed.setVisibility(View.VISIBLE);
+                ll_Refresh_Success.setVisibility(View.VISIBLE);
+                //tv_Refresh_Failed.setVisibility(View.VISIBLE);
                 dialog.dismiss();
                 adapter = new CaseAdapter(getActivity(), data);
                 xListView_case_InvestigationCaseFragment.setAdapter(adapter);
@@ -131,8 +133,14 @@ public class InvestigationCaseFragment extends Fragment implements AdapterView.O
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         int pos = position - 1;   //头布局占一个位置，所以-1
         if (pos >= 0) {           //判断是否pos为-1的情况下
+
+            //收起软键盘
+            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(getActivity().INPUT_METHOD_SERVICE);
+            imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
+
             Toast.makeText(getActivity(), "" + pos, Toast.LENGTH_SHORT).show();
-            activity.initFragmentManager(InvestigationDetailsCaseFragment.newInstance());
+            //activity.initFragmentManager(InvestigationDetailsCaseFragment.newInstance());
+            startActivity(new Intent(getActivity(), Aaa.class));
         }
     }
 

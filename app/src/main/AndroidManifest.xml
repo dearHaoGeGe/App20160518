@@ -18,14 +18,14 @@
             </intent-filter>
         </activity>
 
-        <!--<activity android:name=".view.Aaa">-->
-        <!--<intent-filter>-->
-        <!--<action android:name="android.intent.action.MAIN" />-->
+        <activity android:name=".activity.Aaa">
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
 
-        <!--<category android:name="android.intent.category.LAUNCHER" />-->
-        <!--</intent-filter>-->
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
 
-        <!--</activity>-->
+        </activity>
         <activity android:name=".activity.BankDetailsActivity" />
         <activity android:name=".activity.PoliceDetailsActivity" />
         <activity android:name=".activity.BusinessDetailsActivity" />

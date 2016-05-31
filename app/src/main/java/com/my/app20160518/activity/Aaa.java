@@ -1,4 +1,4 @@
-package com.my.app20160518.view;
+package com.my.app20160518.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -12,6 +12,7 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 
 import com.my.app20160518.R;
+import com.my.app20160518.view.BarChartView;
 
 /**
  * Created by YJH on 2016/5/28.
