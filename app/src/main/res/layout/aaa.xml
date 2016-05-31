@@ -13,11 +13,11 @@
         android:layout_marginRight="80dp"
         android:orientation="vertical">
 
-        <!--<View-->
-            <!--android:id="@+id/view1"-->
-            <!--android:layout_width="300dp"-->
-            <!--android:layout_height="30dp"-->
-            <!--android:background="#FFA07A" />-->
+        <View
+            android:id="@+id/view1"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:background="#FFA07A" />
 
         <View
             android:id="@+id/view2"
@@ -26,12 +26,12 @@
             android:layout_marginTop="30dp"
             android:background="@drawable/bar_biankuang" />
 
-        <!--<com.my.app20160518.view.BarChartView-->
-            <!--android:id="@+id/bar"-->
-            <!--android:background="#FFB6C1"-->
-            <!--android:layout_width="30dp"-->
-            <!--android:layout_height="30dp"-->
-            <!--android:layout_marginTop="30dp"/>-->
+        <com.my.app20160518.view.BarChartView
+            android:id="@+id/bar"
+            android:background="#FFB6C1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"/>
 
     </LinearLayout>
 

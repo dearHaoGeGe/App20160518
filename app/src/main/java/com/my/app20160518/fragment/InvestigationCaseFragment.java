@@ -15,6 +15,8 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,8 +33,10 @@ import java.util.List;
  * <p/>
  * Created by YJH on 2016/5/18.
  */
-public class InvestigationCaseFragment extends Fragment implements AdapterView.OnItemClickListener, XListView.IXListViewListener, TextWatcher {
+public class InvestigationCaseFragment extends Fragment implements AdapterView.OnItemClickListener, XListView.IXListViewListener, TextWatcher, View.OnClickListener {
 
+    private LinearLayout ll_Refresh_Success;
+    private TextView tv_Refresh_Failed;
     private XListView xListView_case_InvestigationCaseFragment;
     private EditText editText_case_InvestigationCaseFragment;
     private CaseAdapter adapter;
@@ -48,7 +52,7 @@ public class InvestigationCaseFragment extends Fragment implements AdapterView.O
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        activity= (InvestigationOfFeedbackActivity) context;
+        activity = (InvestigationOfFeedbackActivity) context;
     }
 
     @Override
@@ -58,7 +62,7 @@ public class InvestigationCaseFragment extends Fragment implements AdapterView.O
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.investigation_case_fragment, container, false);
+        View view = inflater.inflate(R.layout.investigation_case_fragment,container,false);
         return view;
     }
 
@@ -71,14 +75,25 @@ public class InvestigationCaseFragment extends Fragment implements AdapterView.O
     }
 
     private void initView() {
+        tv_Refresh_Failed= (TextView) getActivity().findViewById(R.id.tv_Refresh_Failed);
+        ll_Refresh_Success = (LinearLayout) getActivity().findViewById(R.id.ll_Refresh_Success);
         xListView_case_InvestigationCaseFragment = (XListView) getActivity().findViewById(R.id.xListView_case_InvestigationCaseFragment);
-        editText_case_InvestigationCaseFragment= (EditText) getActivity().findViewById(R.id.editText_case_InvestigationCaseFragment);
+        editText_case_InvestigationCaseFragment = (EditText) getActivity().findViewById(R.id.editText_case_InvestigationCaseFragment);
 
         xListView_case_InvestigationCaseFragment.setPullLoadEnable(true);
         xListView_case_InvestigationCaseFragment.setXListViewListener(this);
 
         xListView_case_InvestigationCaseFragment.setOnItemClickListener(this);
         editText_case_InvestigationCaseFragment.addTextChangedListener(this);
+
+        tv_Refresh_Failed.setOnClickListener(this);
+
+        /**
+         *  v1.setVisibility(View.VISIBLE);   //正常显示
+         *  v1.setVisibility(View.INVISIBLE); //占位隐藏
+         *  v1.setVisibility(View.GONE);      //不占位隐藏
+         */
+        ll_Refresh_Success.setVisibility(View.GONE);
     }
 
     private void initData() {
@@ -86,21 +101,30 @@ public class InvestigationCaseFragment extends Fragment implements AdapterView.O
         data = new ArrayList<String>();
 
         data.add("0000000000");
+        data.add("0000000000");
+        data.add("0000000000");
+        data.add("0000000000");
+        data.add("0000000000");
+        data.add("0000000000");
+        data.add("0000000000");
+        data.add("0000000000");
+        data.add("0000000000");
+        data.add("0000000000");
 
-        final Dialog dialog=new ProgressDialog(getActivity());
+        final Dialog dialog = new ProgressDialog(getActivity());
         dialog.setTitle("正在加载...");
         dialog.show();
 
         mHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
+                //ll_Refresh_Success.setVisibility(View.VISIBLE);
+                tv_Refresh_Failed.setVisibility(View.VISIBLE);
                 dialog.dismiss();
                 adapter = new CaseAdapter(getActivity(), data);
                 xListView_case_InvestigationCaseFragment.setAdapter(adapter);
             }
-        },2000);
-//        adapter = new CaseAdapter(getActivity(), data);
-//        xListView_case_InvestigationCaseFragment.setAdapter(adapter);
+        }, 3000);
     }
 
     @Override
@@ -184,6 +208,15 @@ public class InvestigationCaseFragment extends Fragment implements AdapterView.O
 
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.tv_Refresh_Failed:
+                Toast.makeText(getActivity(), "999", Toast.LENGTH_SHORT).show();
+                break;
+        }
+    }
+
     /**
      * 这个fragment页面中的listview的适配器
      */
@@ -253,7 +286,7 @@ public class InvestigationCaseFragment extends Fragment implements AdapterView.O
 
         class ViewHolder {
             private ImageView imageView_investigation_case_fragment_item;
-            private TextView tv_name_investigation_case_fragment_item,tv_number_investigation_case_fragment_item,
+            private TextView tv_name_investigation_case_fragment_item, tv_number_investigation_case_fragment_item,
                     tv_time_investigation_case_fragment_item;
         }
 

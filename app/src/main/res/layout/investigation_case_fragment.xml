@@ -1,19 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:background="#EED2EE"
+    android:gravity="center"
+    android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/editText_case_InvestigationCaseFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_Refresh_Failed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击刷新"
+        android:visibility="gone" />
 
-    <com.my.app20160518.view.XListView
-        android:id="@+id/xListView_case_InvestigationCaseFragment"
+    <LinearLayout
+        android:id="@+id/ll_Refresh_Success"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="none" />
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editText_case_InvestigationCaseFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.my.app20160518.view.XListView
+            android:id="@+id/xListView_case_InvestigationCaseFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" />
+    </LinearLayout>
 
 </LinearLayout>
