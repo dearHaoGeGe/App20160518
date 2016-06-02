@@ -24,6 +24,7 @@ import android.widget.Toast;
 import com.my.app20160518.activity.InvestigationOfFeedbackActivity;
 import com.my.app20160518.R;
 import com.my.app20160518.activity.Aaa;
+import com.my.app20160518.service.ReceiveMessageService;
 import com.my.app20160518.view.XListView;
 
 import java.util.ArrayList;
@@ -74,6 +75,7 @@ public class InvestigationCaseFragment extends Fragment implements AdapterView.O
 
         initView();
         initData();
+        getActivity().startService(new Intent(getActivity(), ReceiveMessageService.class));
     }
 
     private void initView() {

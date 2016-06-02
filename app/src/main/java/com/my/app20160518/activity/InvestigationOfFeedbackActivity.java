@@ -1,5 +1,6 @@
 package com.my.app20160518.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -8,6 +9,7 @@ import android.support.v4.app.FragmentTransaction;
 
 import com.my.app20160518.R;
 import com.my.app20160518.fragment.InvestigationCaseFragment;
+import com.my.app20160518.service.ReceiveMessageService;
 
 public class InvestigationOfFeedbackActivity extends FragmentActivity {
 
@@ -19,12 +21,25 @@ public class InvestigationOfFeedbackActivity extends FragmentActivity {
         setContentView(R.layout.investigation_of_feedback_activity);
 
         initView();
-
+        startReceiveMessageService();
     }
 
     private void initView() {
         fragment = InvestigationCaseFragment.newInstance();
         initFragmentManager(fragment);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        stopService(new Intent(this,ReceiveMessageService.class));
+    }
+
+    /**
+     * 启动服务
+     */
+    private void startReceiveMessageService(){
+        startService(new Intent(this,ReceiveMessageService.class));
     }
 
     /**
