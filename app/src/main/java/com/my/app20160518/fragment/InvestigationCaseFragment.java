@@ -139,8 +139,8 @@ public class InvestigationCaseFragment extends Fragment implements AdapterView.O
             imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
 
             Toast.makeText(getActivity(), "" + pos, Toast.LENGTH_SHORT).show();
-            //activity.initFragmentManager(InvestigationDetailsCaseFragment.newInstance());
-            startActivity(new Intent(getActivity(), Aaa.class));
+            activity.initFragmentManager(InvestigationDetailsCaseFragment.newInstance());
+//            startActivity(new Intent(getActivity(), Aaa.class));
         }
     }
 
@@ -283,11 +283,12 @@ public class InvestigationCaseFragment extends Fragment implements AdapterView.O
              */
             if (datas != null) {
                 //viewHolder.tv_caseName_item_investigation_case_fragment.setText(datas.get(position));
-                if (position <= 2) {
-                    viewHolder.imageView_investigation_case_fragment_item.setImageResource(R.drawable.clas_evi_editor);
-                } else {
-                    viewHolder.imageView_investigation_case_fragment_item.setImageResource(R.drawable.add_case_name_icon);
-                }
+//                if (position <= 2) {
+//                    viewHolder.imageView_investigation_case_fragment_item.setImageResource(R.drawable.clas_evi_editor);
+//                } else {
+//                    viewHolder.imageView_investigation_case_fragment_item.setImageResource(R.drawable.add_case_name_icon);
+//                }
+                viewHolder.imageView_investigation_case_fragment_item.setImageResource(R.drawable.yjh_item_icon);
             }
             return convertView;
         }

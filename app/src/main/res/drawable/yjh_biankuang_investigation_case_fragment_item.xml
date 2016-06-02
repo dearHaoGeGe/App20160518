@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!--设置边框里面颜色的属性-->
+    <!--<solid android:color="#56C6F7" />-->
+
+    <corners
+        android:bottomLeftRadius="10dp"
+        android:bottomRightRadius="10dp"
+        android:topLeftRadius="10dp"
+        android:topRightRadius="10dp" />
+
+    <stroke
+        android:width="2dip"
+        android:color="#60C7F8" />
+
+</shape>

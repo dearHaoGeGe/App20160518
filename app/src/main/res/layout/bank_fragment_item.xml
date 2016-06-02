@@ -4,20 +4,55 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="5dp"
-        android:background="@drawable/biankuang"
+        android:background="@drawable/yjh_biankuang_investigation_case_fragment_item"
         android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/yjh_right_arrow" />
+
+        <LinearLayout
+            android:id="@+id/ll_name_BankFragment_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/yjh_item_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:text="账户信息"
+                android:textSize="15sp" />
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/tv_name_BankFragment_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/ll_name_BankFragment_item"
+            android:layout_marginRight="35dp"
             android:layout_marginTop="10dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
@@ -28,6 +63,8 @@
             android:id="@+id/tv_Bank_Account_BankFragment_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name_BankFragment_item"
+            android:layout_marginRight="35dp"
             android:layout_marginTop="10dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
@@ -38,16 +75,20 @@
             android:id="@+id/tv_Account_Opening_BankFragment_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/tv_Bank_Account_BankFragment_item"
+            android:layout_marginRight="35dp"
             android:layout_marginTop="10dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:text="开户账号：343405845"
+            android:text="开户账号："
             android:textSize="15sp" />
 
         <TextView
             android:id="@+id/tv_Opening_Time_BankFragment_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/tv_Account_Opening_BankFragment_item"
+            android:layout_marginRight="35dp"
             android:layout_marginTop="10dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
@@ -58,24 +99,26 @@
             android:id="@+id/tv_Account_Balance_BankFragment_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/tv_Opening_Time_BankFragment_item"
+            android:layout_marginRight="35dp"
             android:layout_marginTop="10dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:textSize="15sp"
             android:text="账户余额:30万"
-             />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/tv_Account_Status_BankFragment_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/tv_Account_Balance_BankFragment_item"
             android:layout_marginBottom="10dp"
+            android:layout_marginRight="35dp"
             android:layout_marginTop="10dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:textSize="15sp"
             android:text="开户状态：冻结"
-             />
+            android:textSize="15sp" />
 
-    </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>
