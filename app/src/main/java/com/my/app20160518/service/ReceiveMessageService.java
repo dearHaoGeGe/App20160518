@@ -59,9 +59,17 @@ public class ReceiveMessageService extends Service {
     }
 
     @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        Log.d(TAG, "onLowMemory");
+        startService(new Intent(this,this.getClass()));
+    }
+
+    @Override
     public void onDestroy() {
         super.onDestroy();
         Log.d(TAG, "onDestroy");
+        startService(new Intent(this,this.getClass()));
     }
 
     /**
