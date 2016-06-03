@@ -115,20 +115,20 @@ public class InvestigationCaseFragment extends Fragment implements AdapterView.O
         data.add("0000000000");
         data.add("0000000000");
 
-        final Dialog dialog = new ProgressDialog(getActivity());
-        dialog.setTitle("正在加载...");
-        dialog.show();
-
-        mHandler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
+//        final Dialog dialog = new ProgressDialog(getActivity());
+//        dialog.setTitle("正在加载...");
+//        dialog.show();
+//
+//        mHandler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
                 ll_Refresh_Success.setVisibility(View.VISIBLE);
-                //tv_Refresh_Failed.setVisibility(View.VISIBLE);
-                dialog.dismiss();
+//                //tv_Refresh_Failed.setVisibility(View.VISIBLE);
+//                dialog.dismiss();
                 adapter = new CaseAdapter(getActivity(), data);
                 xListView_case_InvestigationCaseFragment.setAdapter(adapter);
-            }
-        }, 3000);
+//            }
+//        }, 3000);
     }
 
     @Override
