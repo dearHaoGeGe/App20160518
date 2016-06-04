@@ -116,7 +116,7 @@ public class ReceiveMessageService extends Service {
                 .setSubText("——记住我叫叶良辰")                //内容下面的一小段文字
                 .setTicker("收到叶良辰发送过来的信息~")         //设置上升的动画
                 .setWhen(System.currentTimeMillis())       //设置通知时间
-                .setSmallIcon(R.drawable.yjh_item_icon)       //设置小图标
+                .setSmallIcon(R.drawable.yjh_item_icon)       //设置小图标，小图标一定要设，不然的话显示不出来
                 .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher))                       //设置大图标
                 .setDefaults(Notification.DEFAULT_ALL)      //设置声音、震动、提示灯都默认
                 .setAutoCancel(true);                     //设置点击后自动取消
